@@ -2,7 +2,7 @@
 
 body {
   
-  background: linear-gradient(90deg, rgba(84, 40, 240, 0.3) 0%, rgb(77, 110, 226) 35%, rgba(0,176,255,1) 100%);
+  background: linear-gradient(90deg, #451ad3, rgb(77, 110, 226) 35%, rgba(0,176,255,1) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,21 +27,27 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10%;
-    margin-bottom: 212px;
-  }
+    margin-bottom: 219px;
+    margin-left: 69px;
+}
+  
 
 h1 {
   text-align: center;
   color: white;
   letter-spacing: 1px;
-  margin: 0;
+  margin: 50px;
 }
 .first_card{
   width: 80%;
   margin-left: 10px;
 
 }
-
+.total{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
 
 
 
@@ -73,7 +79,7 @@ input[type='number'] {
 
 .btn {
     cursor: pointer;
-    background: linear-gradient(90deg, rgba(61, 163, 236, 0.3) 0%, rgb(97, 165, 233) 35%, rgb(10, 202, 245) 100%);
+    background: linear-gradient(90deg, rgba(110, 185, 238, 0.3) 0%, rgb(57, 129, 202) 35%, rgb(26, 119, 226) 100%);
     box-shadow: var(--box-shadow);
     color: #fff;
     border: 0;
@@ -83,65 +89,46 @@ input[type='number'] {
     padding: 10px;
     width: 70%;
   }
+  .fa fa-trash:hover{
+    display: block;
+  }
 
-.btn:focus,
+/* .btn:focus,
 .delete-btn:focus {
   outline: 0;
-}
+} */
 li{
   list-style: none;
 }
+.list{
+  width: 250px;
+    height: 110px;
+    overflow: auto;
+
+}
 .items{
+  height: 20px;
   display: flex;
   justify-content: space-around;
   gap: 18px;
 }
 .del{
+  color: white;
+}
+.del:hover{
   color: red;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* h3 {
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 10px;
-  margin: 40px 0 10px;
-}
-
-h4 {
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.inc-exp-container {
-  background-color: #fff;
-  box-shadow: var(--box-shadow);
-  padding: 20px;
+.Total {
   display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
+  gap: 25%;
 }
 
-.inc-exp-container > div {
-  flex: 1;
-  text-align: center;
-}
 
-.inc-exp-container > div:first-of-type {
-  border-right: 1px solid #dedede;
+.none{
+  display: none;
+ 
 }
+.items:nth-child(odd){
+  background-color: rgb(218, 215, 221);
 
-.money {
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin: 5px 0;
-} */
+}

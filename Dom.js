@@ -8,22 +8,32 @@ const para2=document.querySelector("#error2");
 
 setTimeout(() => {
     para1.remove();
-    para2.remove();
     
-    },2500)
+    
+    },2500);
+    // setTimeout(() => {
+        
+    //     para2.remove();
+        
+    //     },2500);
+  
 const form = document.querySelector("form")
 form.addEventListener("submit",(event)=>{
     event.preventDefault();
-    if(inp1.value == ""){
-      para1.innerHTML="!Plaese enter your product...";
-      para1.style.color="red";
-       return;
-    }
-    else if(inp2.value == ""){
-        para2.innerHTML="!invalid number....";
-        para2.style.color="red";
-        return;
-    }
+    
+        if(inp1.value == ""){
+            para1.innerHTML="!Plaese enter your product...";
+            para1.style.color="red";
+             return;
+          }
+          else if(inp2.value == ""){
+              para2.innerHTML="!invalid number....";
+              para2.style.color="red";
+              return;
+          }
+
+    
+   
 
 
     const div = document.createElement("div")
@@ -32,13 +42,10 @@ form.addEventListener("submit",(event)=>{
     const span = document.createElement("span")
     const li = document.createElement("li")
     span.innerText = inp1.value;
-    li.innerText = inp2.value
+    li.innerText = inp2.value;
     ul.append(div);
     div.append(span);
     div.append(li);
-    let total_div=document.createElement("div");
-    let hesd2=document.createElement("h2");
-    
     form.reset();
     
 
@@ -52,14 +59,46 @@ form.addEventListener("submit",(event)=>{
     div.append(del)
     del.addEventListener("click",(e)=>{
         e.target.parentElement.parentElement.remove();
+        // h2.innerHTML= 0 ;
        
   
     })
+     
+
+    let h2=document.querySelector("#h2");
+    let total_div=document.querySelector(".none");
+    total_div.classList.remove("none");
+   
+    
+    
+
+    let amount_list=[];
+        amount_list=li.innerText;
+    // console.log(amount_list);
+    for(i=0;i < amount_list.length;i++){
+       console.log(i);
+        if(i > 0){
+            h2.innerHTML = Number(amount_list)+Number(h2.innerHTML);
+            console.log(h2.innerHTML);
+            
+          }
+       
+       
+
+    }
+   
+
 
 
  
 })
 
+  const icon=document.querySelector("#icon").addEventListener("click",()=>{
+    console.log("hii");
+    amount_list.sort();
+   
+
+  })
 
 
 
